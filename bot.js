@@ -439,4 +439,5 @@ const aUser = message.guild.members.get(message.content.split(" ")[1]) || messag
 }):
 
 
+
 bot..login(process.env.BOT_TOKEN);
