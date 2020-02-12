@@ -1,7 +1,19 @@
 const Discord = require("discord.js");
 const bot = discord.Client();
 
-bot.on("message", message => {
+bot.on("ready", async () => {
+	console.log(`${bot.user.username} is online!`);
+
+	bot.user.setActivity("Programming!", {type: "LISTENING"});
+
+	//bot.user.setGame("Programming!");
+});
+
+
+bot.on("message", async message => {
+	if(message.author.bot) return;
+	if(message.channel.type === "dm") return;
+  
   const prefix = "$";
   const cmd = msg.content.split(" ")[0];
   let messageArray = message.content.split(" ");
@@ -424,7 +436,7 @@ const aUser = message.guild.members.get(message.content.split(" ")[1]) || messag
 
 
 
-
+}):
 
 
 bot..login(process.env.BOT_TOKEN);
