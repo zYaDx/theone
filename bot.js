@@ -1,15 +1,11 @@
 const Discord = require("discord.js");
-const bot = discord.Client();
+const bot = new discord.Client();
 
-bot.on("ready", async () => {
-	console.log(`${bot.user.username} is online!`);
-
-	bot.user.setActivity("Programming!", {type: "LISTENING"});
-
-	//bot.user.setGame("Programming!");
-});
-
-
+//NO DISCORD//
+bot.on('message', message => {
+	const prefix = "$";
+	const cmd = const cmd = msg.content.split(" ")[0];
+	
 
 
 
